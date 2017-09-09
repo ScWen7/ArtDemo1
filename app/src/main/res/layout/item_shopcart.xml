@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:button="@null"
+        android:clickable="false"
         android:drawableLeft="@drawable/shopping_cart_select_selector"
         android:paddingBottom="8.0dip"
         android:paddingTop="8.0dip"/>
@@ -68,6 +69,7 @@
         android:layout_marginTop="6.0dip"
         android:layout_toRightOf="@id/iv_artwork_pic"
         android:text="已卖出"
+        android:visibility="gone"
         android:textColor="@color/red_ff2d2d"
         android:textSize="14sp"/>
 </RelativeLayout>

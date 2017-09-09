@@ -7,4 +7,5 @@
     <string name="shopping_cart_artwork">件</string>
     <string name="number">1</string>
     <string name="shopping_cart_total">共计</string>
+    <string name="monen_symbol">¥</string>
 </resources>

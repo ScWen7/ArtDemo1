@@ -53,6 +53,16 @@ public class FragmentController {
         ft.commit();
     }
 
+
+    public void setCurrentTab(int position) {
+        int childCount = mRadioGroup.getChildCount();
+        if (position < childCount) {
+            RadioButton childAt = (RadioButton) mRadioGroup.getChildAt(position);
+            childAt.setChecked(true);
+        }
+
+    }
+
     /**
      * RadioGroup设置监听
      */
@@ -92,8 +102,7 @@ public class FragmentController {
             FragmentTransaction ft = fm.beginTransaction();
             if (position > preIndex) {
                 ft.setCustomAnimations(R.anim.slide_right_in, R.anim.slide_left_out);
-            }
-            else if (position < preIndex) {
+            } else if (position < preIndex) {
                 ft.setCustomAnimations(R.anim.slide_left_in, R.anim.slide_right_out);
             }
             if (preFragment != null) {
