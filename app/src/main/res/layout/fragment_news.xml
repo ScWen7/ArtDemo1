@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:background="@color/white">
+
+    <include layout="@layout/status_bar"/>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:layout_below="@+id/view"
+        android:background="@color/black"
+        android:gravity="center"
+        android:text="资讯"
+        android:textColor="@color/white"
+        android:textSize="18.0sp"/>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_main"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@android:color/transparent"
+        app:tabIndicatorColor="@color/black"
+        app:tabIndicatorHeight="1dp"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/black"
+        app:tabTextAppearance="@style/UnselectedTabTextAppearance"
+        />
+
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:id="@+id/viewpager_news"
+        android:layout_height="match_parent"/>
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/ll_news_layout"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="40.0dip"-->
+        <!--android:layout_below="@id/tv"-->
+        <!--android:background="@color/white"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/llayout_block1"-->
+            <!--android:layout_width="0.0dip"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1.0"-->
+            <!--android:gravity="center_horizontal"-->
+            <!--android:orientation="vertical">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_all"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="全部"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:textSize="14.0sp"/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_all_underline"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="2.0dip"-->
+                <!--android:layout_marginLeft="20.0dip"-->
+                <!--android:layout_marginRight="20.0dip"-->
+                <!--android:layout_marginTop="6.0dip"-->
+                <!--android:background="@color/black"-->
+                <!--android:visibility="visible"/>-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/llayout_block2"-->
+            <!--android:layout_width="0.0dip"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1.0"-->
+            <!--android:gravity="center_horizontal"-->
+            <!--android:orientation="vertical">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_news"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="新闻"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:textSize="14.0sp"/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_news_underline"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="2.0dip"-->
+                <!--android:layout_marginLeft="20.0dip"-->
+                <!--android:layout_marginRight="20.0dip"-->
+                <!--android:layout_marginTop="6.0dip"-->
+                <!--android:background="@color/black"-->
+                <!--android:visibility="invisible"/>-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/llayout_block3"-->
+            <!--android:layout_width="0.0dip"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1.0"-->
+            <!--android:gravity="center_horizontal"-->
+            <!--android:orientation="vertical">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_exhibitions"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="展讯"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:textSize="14.0sp"/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_exhibitions_underline"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="2.0dip"-->
+                <!--android:layout_marginLeft="20.0dip"-->
+                <!--android:layout_marginRight="20.0dip"-->
+                <!--android:layout_marginTop="6.0dip"-->
+                <!--android:background="@color/black"-->
+                <!--android:visibility="invisible"/>-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/llayout_block4"-->
+            <!--android:layout_width="0.0dip"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1.0"-->
+            <!--android:gravity="center_horizontal"-->
+            <!--android:orientation="vertical">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_recommend"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="推介"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:textSize="14.0sp"/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_recommend_underline"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="2.0dip"-->
+                <!--android:layout_marginLeft="20.0dip"-->
+                <!--android:layout_marginRight="20.0dip"-->
+                <!--android:layout_marginTop="6.0dip"-->
+                <!--android:background="@color/black"-->
+                <!--android:visibility="invisible"/>-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/llayout_block5"-->
+            <!--android:layout_width="0.0dip"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1.0"-->
+            <!--android:gravity="center_horizontal"-->
+            <!--android:orientation="vertical">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_collect"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="收藏"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:textSize="14.0sp"/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_collect_underline"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="2.0dip"-->
+                <!--android:layout_marginLeft="20.0dip"-->
+                <!--android:layout_marginRight="20.0dip"-->
+                <!--android:layout_marginTop="6.0dip"-->
+                <!--android:background="@color/black"-->
+                <!--android:visibility="invisible"/>-->
+        <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+
+    <!--<com.jcodecraeer.xrecyclerview.XRecyclerView-->
+        <!--android:id="@+id/newsRecyclerView"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_below="@id/ll_news_layout"-->
+        <!--android:columnWidth="240dp"-->
+        <!--android:scrollbars="none"/>-->
+</LinearLayout>

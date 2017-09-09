@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+    <io.scwen7.artdemo.weight.HeadZoomScrollView
+        android:id="@+id/fragment_mine2_ll_common"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="250.0dip"
+                android:background="@drawable/fragment_mine_bg"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/fragment_mine2_tv_login_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="28.0dip"
+                    android:paddingTop="12.0dip"
+                    android:text="请登录/注册"
+                    android:textColor="@color/black"
+                    android:textSize="18.0sp"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/fragment_mine2_iv_no_login"
+                    android:layout_width="96.0dip"
+                    android:layout_height="96.0dip"
+                    android:layout_above="@id/fragment_mine2_tv_login_register"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/fragment_mine2_no_login_img2"
+                    app:civ_border_color="@color/bg_1a1a1a"
+                    app:civ_border_width="2dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/fragment_mine2_my_order1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:background="@drawable/more_background_seletor"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/tv_buy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44.0dip"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="12.0dip"
+                    android:paddingRight="10.0dip"
+                    android:text="我购买的"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"/>
+
+                <ImageView
+                    android:layout_width="10.0dip"
+                    android:layout_height="10.0dip"
+                    android:layout_alignTop="@id/tv_buy"
+                    android:layout_marginLeft="-10.0dip"
+                    android:layout_marginTop="5.0dip"
+                    android:layout_toRightOf="@id/tv_buy"
+                    android:src="@drawable/icon_shopcart_num_oval"
+                    android:visibility="visible"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10.0dip"
+                    android:src="@drawable/fragment_mine2_into"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/gray_f7f7f7"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70.0dip"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/fragment_mine2_rl_my_order1"
+                    android:layout_width="0.0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/more_background_seletor"
+                    android:clickable="true">
+
+                    <TextView
+                        android:id="@+id/fragment_mine2_tv_my_order1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:drawablePadding="4.0dip"
+                        android:drawableTop="@drawable/icon_mine_order_1"
+                        android:text="待付款"
+                        android:textColor="@color/bg_646464"
+                        android:textSize="12dp"/>
+
+                    <TextView
+                        android:id="@+id/fragment_mine2_tv_wait_pay_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/fragment_mine2_tv_my_order1"
+                        android:layout_marginTop="-3.0dip"
+                        android:background="@drawable/icon_mine_order_num"
+                        android:gravity="center"
+                        android:paddingLeft="4.0dip"
+                        android:paddingRight="4.0dip"
+                        android:text="1"
+                        android:textColor="@color/red_da1025"
+                        android:textSize="9dp"
+                        android:visibility="visible"/>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/fragment_mine2_rl_my_order2"
+                    android:layout_width="0.0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/more_background_seletor"
+                    android:clickable="true">
+
+                    <TextView
+                        android:id="@+id/fragment_mine2_tv_my_order2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:drawablePadding="4.0dip"
+                        android:drawableTop="@drawable/icon_mine_order_2"
+                        android:text="待发货"
+                        android:textColor="@color/bg_646464"
+                        android:textSize="12dp"/>
+
+                    <TextView
+                        android:id="@+id/fragment_mine2_tv_wait_send_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/fragment_mine2_tv_my_order2"
+                        android:layout_marginTop="-3.0dip"
+                        android:background="@drawable/icon_mine_order_num"
+                        android:gravity="center"
+                        android:paddingLeft="4.0dip"
+                        android:paddingRight="4.0dip"
+                        android:text="1"
+                        android:textColor="@color/red_da1025"
+                        android:textSize="9dp"
+                        android:visibility="visible"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/fragment_mine2_rl_my_order3"
+                    android:layout_width="0.0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/more_background_seletor"
+                    android:clickable="true">
+
+                    <TextView
+                        android:id="@+id/fragment_mine2_tv_my_order3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:drawablePadding="4.0dip"
+                        android:drawableTop="@drawable/icon_mine_order_3"
+                        android:text="待收货"
+                        android:textColor="@color/bg_646464"
+                        android:textSize="12dp"/>
+
+                    <TextView
+                        android:id="@+id/fragment_mine2_tv_wait_rece_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/fragment_mine2_tv_my_order3"
+                        android:layout_marginTop="-3.0dip"
+                        android:background="@drawable/icon_mine_order_num"
+                        android:gravity="center"
+                        android:paddingLeft="4.0dip"
+                        android:paddingRight="4.0dip"
+                        android:text="1"
+                        android:textColor="@color/red_da1025"
+                        android:textSize="9dp"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/fragment_mine2_rl_my_order4"
+                    android:layout_width="0.0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/more_background_seletor"
+                    android:clickable="true">
+
+                    <TextView
+                        android:id="@+id/fragment_mine2_tv_my_order4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:drawablePadding="4.0dip"
+                        android:drawableTop="@drawable/icon_mine_order_4"
+                        android:text="交易成功"
+                        android:textColor="@color/bg_646464"
+                        android:textSize="12dp"/>
+
+                    <TextView
+                        android:id="@+id/fragment_mine2_tv_trade_succ_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/fragment_mine2_tv_my_order4"
+                        android:layout_marginTop="-3.0dip"
+                        android:background="@drawable/icon_mine_order_num"
+                        android:gravity="center"
+                        android:paddingLeft="4.0dip"
+                        android:paddingRight="4.0dip"
+                        android:text="1"
+                        android:textColor="@color/red_da1025"
+                        android:textSize="9sp"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/fragment_mine2_rl_my_order5"
+                    android:layout_width="0.0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/more_background_seletor"
+                    android:clickable="true">
+
+                    <TextView
+                        android:id="@+id/fragment_mine2_tv_my_order5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:drawablePadding="4.0dip"
+                        android:drawableTop="@drawable/icon_mine_order_5"
+                        android:text="退货/售后"
+                        android:textColor="@color/bg_646464"
+                        android:textSize="12sp"/>
+
+                    <TextView
+                        android:id="@+id/fragment_mine2_tv_refund_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/fragment_mine2_tv_my_order5"
+                        android:layout_marginTop="-3.0dip"
+                        android:background="@drawable/icon_mine_order_num"
+                        android:gravity="center"
+                        android:paddingLeft="4.0dip"
+                        android:paddingRight="4.0dip"
+                        android:text="1"
+                        android:textColor="@color/red_da1025"
+                        android:textSize="9sp"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="12.0dip"
+                android:background="@color/bg_f6f6f6"/>
+
+            <RelativeLayout
+                android:id="@+id/fragment_mine2_rl_favorite"
+                android:layout_width="match_parent"
+                android:layout_height="50.0dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12.0dip"
+                    android:text="收藏夹"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12.0dip"
+                    android:src="@drawable/fragment_mine2_into"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="12.0dip"
+                    android:background="@color/bg_f6f6f6"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/fragment_mine2_rl_my_attention"
+                android:layout_width="match_parent"
+                android:layout_height="50.0dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12.0dip"
+                    android:text="我关注的"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12.0dip"
+                    android:src="@drawable/fragment_mine2_into"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="12.0dip"
+                    android:background="@color/bg_f6f6f6"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/fragment_mine2_rl_account"
+                android:layout_width="match_parent"
+                android:layout_height="50.0dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12.0dip"
+                    android:text="账户管理"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12.0dip"
+                    android:src="@drawable/fragment_mine2_into"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="12.0dip"
+                    android:background="@color/bg_f6f6f6"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/fragment_mine2_rl_set"
+                android:layout_width="match_parent"
+                android:layout_height="50.0dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12.0dip"
+                    android:text="设置"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12.0dip"
+                    android:src="@drawable/fragment_mine2_into"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="12.0dip"
+                    android:background="@color/bg_f6f6f6"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </io.scwen7.artdemo.weight.HeadZoomScrollView>
+</RelativeLayout>
