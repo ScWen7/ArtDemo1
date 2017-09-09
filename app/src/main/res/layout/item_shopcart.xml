@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/rl_shopcart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="10.0dip">
+
+    <CheckBox
+        android:id="@+id/cb_checked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:button="@null"
+        android:drawableLeft="@drawable/shopping_cart_select_selector"
+        android:paddingBottom="8.0dip"
+        android:paddingTop="8.0dip"/>
+
+    <ImageView
+        android:id="@+id/iv_artwork_pic"
+        android:layout_width="100.0dip"
+        android:layout_height="100.0dip"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10.0dip"
+        android:layout_toRightOf="@id/cb_checked"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:id="@+id/tv_shopcart_artname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/iv_artwork_pic"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginTop="3.0dip"
+        android:layout_toRightOf="@id/iv_artwork_pic"
+        android:text="艺术品名称"
+        android:textColor="@color/black"
+        android:textSize="15dp"/>
+
+    <TextView
+        android:id="@+id/tv_shopcart_artprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/iv_artwork_pic"
+        android:layout_alignParentRight="true"
+        android:text="￥15000"
+        android:textColor="@color/bg_e3242e"
+        android:textSize="14dp"/>
+
+    <TextView
+        android:id="@+id/tv_shopcart_artinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_shopcart_artname"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginTop="6.0dip"
+        android:layout_toRightOf="@id/iv_artwork_pic"
+        android:text="油画·68cmx67cm"
+        android:textColor="@color/bg_969696"
+        android:textSize="12dp"/>
+
+    <TextView
+        android:id="@+id/tv_shopcart_sold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_shopcart_artinfo"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginTop="6.0dip"
+        android:layout_toRightOf="@id/iv_artwork_pic"
+        android:text="已卖出"
+        android:textColor="@color/red_ff2d2d"
+        android:textSize="14sp"/>
+</RelativeLayout>

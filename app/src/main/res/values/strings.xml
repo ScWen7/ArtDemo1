@@ -2,4 +2,9 @@
     <string name="app_name">ArtDemo</string>
 
     <string name="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Etiam eget ligula eu lectus lobortis condimentum.</string>
+    <string name="check_all">全选</string>
+    <string name="price">￥0.00</string>
+    <string name="shopping_cart_artwork">件</string>
+    <string name="number">1</string>
+    <string name="shopping_cart_total">共计</string>
 </resources>
