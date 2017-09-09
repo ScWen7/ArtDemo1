@@ -4,9 +4,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import io.scwen7.artdemo.R;
-import io.scwen7.artdemo.weight.PullScrollView;
 
-public class TestActivity extends AppCompatActivity implements PullScrollView.OnTurnListener {
+public class TestActivity extends AppCompatActivity  {
 
 
 
@@ -17,8 +16,4 @@ public class TestActivity extends AppCompatActivity implements PullScrollView.On
 
     }
 
-    @Override
-    public void onTurn() {
-
-    }
 }
