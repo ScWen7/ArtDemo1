@@ -1,18 +1,28 @@
 package io.scwen7.artdemo.ui.fragment;
 
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.jcodecraeer.xrecyclerview.XRecyclerView;
+import com.scwang.smartrefresh.layout.SmartRefreshLayout;
+import com.scwang.smartrefresh.layout.api.RefreshLayout;
+import com.scwang.smartrefresh.layout.header.ClassicsHeader;
+import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.OnClick;
 import io.scwen7.artdemo.R;
 import io.scwen7.artdemo.base.BaseFragment;
+import io.scwen7.artdemo.data.bean.FindMultiItem;
 import io.scwen7.artdemo.ui.activity.ShopCartActivity;
+import io.scwen7.artdemo.ui.adapter.FindRecyclerAdapter;
 
 /**
  * Created by 解晓辉  on 2017/9/9 12:20 *
@@ -35,7 +45,13 @@ public class FindFragment extends BaseFragment {
     @BindView(R.id.ll_title)
     LinearLayout mLlTitle;
     @BindView(R.id.recyclerview)
-    XRecyclerView mRecyclerview;
+    RecyclerView mRecyclerview;
+
+    @BindView(R.id.refreshLayout)
+    SmartRefreshLayout mRefreshLayout;
+
+    private FindRecyclerAdapter mFindRecyclerAdapter;
+    private List<FindMultiItem> mFindMultiItems = new ArrayList<>();
 
     @Override
     protected int getLayoutId() {
@@ -45,6 +61,35 @@ public class FindFragment extends BaseFragment {
     @Override
     protected void initData() {
 
+        mRecyclerview.setLayoutManager(new LinearLayoutManager(mActivity));
+        mFindRecyclerAdapter = new FindRecyclerAdapter(mFindMultiItems);
+
+        mRecyclerview.setAdapter(mFindRecyclerAdapter);
+        mRefreshLayout.setRefreshHeader(new ClassicsHeader(mActivity));
+        mRefreshLayout.setEnableLoadmore(false);//是否启用上拉加载功能
+        mRefreshLayout.setOnRefreshListener(new OnRefreshListener() {
+            @Override
+            public void onRefresh(RefreshLayout refreshlayout) {
+                refreshData();
+            }
+        });
+        mRefreshLayout.autoRefresh();//自动刷新
+    }
+
+    private void refreshData() {
+        mRefreshLayout.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                mFindMultiItems.clear();
+                mFindMultiItems.add(new FindMultiItem(FindMultiItem.BANNER, null));
+                mFindMultiItems.add(new FindMultiItem(FindMultiItem.SESSION, null));
+                mFindMultiItems.add(new FindMultiItem(FindMultiItem.TODAY, null));
+                mFindMultiItems.add(new FindMultiItem(FindMultiItem.ARTIST, null));
+                mFindMultiItems.add(new FindMultiItem(FindMultiItem.RENT, null));
+                mRefreshLayout.finishRefresh();
+                mFindRecyclerAdapter.setNewData(mFindMultiItems);
+            }
+        }, 3000);
     }
 
 

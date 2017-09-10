@@ -78,10 +78,10 @@ public class ShopCartActivity extends BaseActivity {
         mCartItems = new ArrayList<>();
         CartItem cartItem1 = new CartItem(R.drawable.oil_chouxiang, "1001", "2800.00", "抽象|68cm x 68cm", "交河故城");
         CartItem cartItem2 = new CartItem(R.drawable.oil_dangdai, "1002", "12000.00", "当代|68cm x 68cm", "洋河");
-        CartItem cartItem3 = new CartItem(R.drawable.oil_chouxiang, "1003", "1000.00", "风景|68cm x 68cm", "山城");
-        CartItem cartItem4 = new CartItem(R.drawable.oil_chouxiang, "1004", "2000.00", "静物|68cm x 68cm", "荡漾年华");
-        CartItem cartItem5 = new CartItem(R.drawable.oil_chouxiang, "1005", "100.00", "人物|68cm x 68cm", "生活集");
-        CartItem cartItem6 = new CartItem(R.drawable.oil_chouxiang, "1006", "350.00", "肖像|68cm x 68cm", "江南春");
+        CartItem cartItem3 = new CartItem(R.drawable.oil_fengjing, "1003", "1000.00", "风景|68cm x 68cm", "山城");
+        CartItem cartItem4 = new CartItem(R.drawable.oil_jingwu, "1004", "2000.00", "静物|68cm x 68cm", "荡漾年华");
+        CartItem cartItem5 = new CartItem(R.drawable.oil_renwu, "1005", "100.00", "人物|68cm x 68cm", "生活集");
+        CartItem cartItem6 = new CartItem(R.drawable.oil_xiaoxiang, "1006", "350.00", "肖像|68cm x 68cm", "江南春");
 
         mCartItems.add(cartItem1);
         mCartItems.add(cartItem2);

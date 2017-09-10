@@ -26,12 +26,12 @@ public class SessionFragment extends BaseFragment {
     private List<Fragment> mFragments;
 
     private String[] images = {
-            "http://oqe10cpgp.bkt.clouddn.com/image/greateimage/01.jpg",
-            "http://oqe10cpgp.bkt.clouddn.com/image/greateimage/02.jpg",
-            "http://oqe10cpgp.bkt.clouddn.com/image/greateimage/03.jpg",
-            "http://oqe10cpgp.bkt.clouddn.com/image/greateimage/04.jpg",
-            "http://oqe10cpgp.bkt.clouddn.com/image/greateimage/05.jpg",
-            "http://oqe10cpgp.bkt.clouddn.com/image/greateimage/06.jpg",
+            "http://images.artbloger.com/2000_1600_1/artwork/2017/04/26/Art_14931928612673.jpg",
+            "http://images.artbloger.com/2000_1600_1/artwork/2017/09/07/Art_15047676405727.jpg",
+            "http://images.artbloger.com/2000_1600_1/artwork/2017/08/07/Art_15020853807434.jpg",
+            "http://images.artbloger.com/2000_1600_1/artwork/2017/06/26/Art_14984443432824.jpg",
+            "http://images.artbloger.com/2000_1600_1/artwork/2017/09/07/Art_15047674396907.jpg",
+            "http://images.artbloger.com/2000_1600_1/artwork/2017/03/27/Art_14906056861754.jpg",
     };
 
     private List<CardItem> mCardItems;

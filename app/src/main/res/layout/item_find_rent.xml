@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tvRent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12.0dip"
+        android:layout_marginRight="12.0dip"
+        android:layout_marginTop="16.0dip"
+        android:drawableLeft="@drawable/icon_hometitile"
+        android:drawablePadding="2.0dip"
+        android:text="租赁"
+        android:textColor="@color/bg_303030"
+        android:textSize="15.0sp"/>
+
+    <ImageView
+        android:id="@+id/ivRent"
+        android:layout_width="fill_parent"
+        android:layout_height="200.0dip"
+        android:layout_below="@id/tvRent"
+        android:background="@drawable/rent_entry"
+        android:layout_margin="10.0dip"/>
+</RelativeLayout>
