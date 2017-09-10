@@ -1,12 +1,15 @@
 package io.scwen7.artdemo.ui.adapter;
 
+import android.content.Intent;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.chad.library.adapter.base.BaseMultiItemQuickAdapter;
+import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
@@ -18,6 +21,7 @@ import io.scwen7.artdemo.R;
 import io.scwen7.artdemo.data.bean.ArtistBean;
 import io.scwen7.artdemo.data.bean.FindMultiItem;
 import io.scwen7.artdemo.data.bean.TodayBean;
+import io.scwen7.artdemo.ui.activity.ProductInfoActivity;
 import io.scwen7.artdemo.utils.GlideImageLoader;
 
 /**
@@ -94,23 +98,36 @@ public class FindRecyclerAdapter extends BaseMultiItemQuickAdapter<FindMultiItem
         GridLayoutManager gridLayoutManager = new GridLayoutManager(mContext, 2);
         recyclerToday.setLayoutManager(gridLayoutManager);
 
-        List<TodayBean> todayBeen = new ArrayList<>();
+        final List<TodayBean> todayBeen = new ArrayList<>();
 
         todayBeen.add(new TodayBean("http://images.artbloger.com/2000_1600_1/artwork/2017/03/27/Art_14906022455981.jpg",
-                "http://images.artbloger.com/70_70_3/avatar/2014/09/18/Art_14110247658528.jpg","闲系列二","6,000","玟紫"));
+                "http://images.artbloger.com/70_70_3/avatar/2014/09/18/Art_14110247658528.jpg", "闲系列二", "6,000", "玟紫"));
 
         todayBeen.add(new TodayBean("http://images.artbloger.com/2000_1600_1/artwork/2017/03/27/Art_14906023121807.jpg",
-                "http://images.artbloger.com/70_70_3/cropcut/2016/05/06/Art_14625165008547.png","交河故城","2,800","棋至文化"));
+                "http://images.artbloger.com/70_70_3/cropcut/2016/05/06/Art_14625165008547.png", "交河故城", "2,800", "棋至文化"));
 
         todayBeen.add(new TodayBean("http://images.artbloger.com/2000_1600_1/artwork/2017/03/27/Art_14906023268260.jpg",
-                "http://images.artbloger.com/70_70_3/avatar/2014/09/18/Art_14110247658528.jpg","洋和","12,000","菀儿"));
+                "http://images.artbloger.com/70_70_3/avatar/2014/09/18/Art_14110247658528.jpg", "洋和", "12,000", "菀儿"));
 
         todayBeen.add(new TodayBean("http://images.artbloger.com/70_70_3/avatar/2014/08/30/Art_14094073839207.JPG",
-                "","女人系列一","13,000","棋至文化"));
+                "", "女人系列一", "13,000", "棋至文化"));
 
 
-        FindTodayAdapter adapter = new FindTodayAdapter(R.layout.find_today_item, todayBeen);
+        final FindTodayAdapter adapter = new FindTodayAdapter(R.layout.find_today_item, todayBeen);
         recyclerToday.setAdapter(adapter);
+
+        adapter.setOnItemClickListener(new OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                mContext.startActivity(new Intent(mContext, ProductInfoActivity.class));
+            }
+        });
+        helper.getView(R.id.showMore).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                adapter.addData(todayBeen);
+            }
+        });
 
     }
 

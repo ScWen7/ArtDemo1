@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="43.0dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20.0dip">
+
+        <TextView
+            android:id="@+id/arttype"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="类型：国画"
+            android:textColor="@color/bg_646464"
+            android:textSize="14dp"/>
+
+        <TextView
+            android:id="@+id/mounts"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="装裱：无"
+            android:textColor="@color/bg_646464"
+            android:textSize="14dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"
+        android:layout_below="@+id/et_login_pwd"
+        android:layout_marginLeft="25.0dip"
+        android:layout_marginRight="25.0dip"
+        android:background="@color/bg_dedede"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="43.0dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20.0dip">
+
+        <TextView
+            android:id="@+id/artnumber"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="编号：5740146414"
+            android:textColor="@color/bg_646464"
+            android:textSize="14dp"/>
+
+        <TextView
+            android:id="@+id/chromat"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="色差：无"
+            android:textColor="@color/bg_646464"
+            android:textSize="14dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"
+        android:layout_below="@id/et_login_pwd"
+        android:layout_marginLeft="25.0dip"
+        android:layout_marginRight="25.0dip"
+        android:background="@color/bg_dedede"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="43.0dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20.0dip">
+
+        <TextView
+            android:id="@+id/artsize"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="尺寸：1800*120cm"
+            android:textColor="@color/bg_646464"
+            android:textSize="14dp"/>
+
+        <TextView
+            android:id="@+id/blemish"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="瑕疵：无"
+            android:textColor="@color/bg_646464"
+            android:textSize="14dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"
+        android:layout_below="@id/et_login_pwd"
+        android:layout_marginLeft="25.0dip"
+        android:layout_marginRight="25.0dip"
+        android:background="@color/bg_dedede"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="43.0dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20.0dip">
+
+        <TextView
+            android:id="@+id/ispromise"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="保真承诺：是"
+            android:textColor="@color/bg_646464"
+            android:textSize="14dp"/>
+
+        <TextView
+            android:id="@+id/material"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="使用材质：未知"
+            android:textColor="@color/bg_646464"
+            android:textSize="14dp"/>
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_poster_pic"
+        android:layout_width="fill_parent"
+        android:layout_height="220dp"
+        android:layout_marginBottom="20.0dip"
+        android:layout_marginTop="14.0dip"/>
+</LinearLayout>

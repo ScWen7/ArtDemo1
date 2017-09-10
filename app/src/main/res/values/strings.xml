@@ -8,4 +8,5 @@
     <string name="number">1</string>
     <string name="shopping_cart_total">共计</string>
     <string name="monen_symbol">¥</string>
+    <string name="find_now_buy">立即购买</string>
 </resources>
